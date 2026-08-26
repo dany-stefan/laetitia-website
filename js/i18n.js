@@ -8,7 +8,7 @@ window.I18N = {
     cta: "Réserver une séance",
     eyebrow: "Pointe-Saint-Charles · Montréal",
     hero_title: "Alignement spirituel des pensées intérieures",
-    hero_lede: "Un cabinet calme, introspectif, accueillant. Laetitia Legrand reçoit les adultes en personne — sans spectacle, sans promesse de miracle.",
+    hero_lede: "C'est des grâces à l'hypnose.",
     hero_cred: "Infirmière clinicienne (expérience CHUM) · hypnose, certification intermédiaire (Québec / Montréal) · pratique indépendante",
     langs: "Séances en français, English et español.",
     fact_len: "30 ou 60 minutes",
