@@ -39,7 +39,7 @@
     .catch(() => renderSlots());
 
   function duration() {
-    return Number((form.querySelector("[name=duration]:checked") || {}).value || 60);
+    return Number((form.querySelector("[name=duration]:checked") || {}).value || 90);
   }
 
   function renderSlots() {
