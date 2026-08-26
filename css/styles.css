@@ -1,15 +1,15 @@
 :root {
-  --paper: #f6efe4;
-  --paper-deep: #efe4d4;
-  --ink: #2c241c;
-  --ink-soft: #5c5146;
-  --moss: #3d4a3a;
-  --moss-deep: #2a3428;
-  --clay: #9a5a3c;
-  --clay-soft: #c4896a;
-  --line: rgba(44, 36, 28, 0.12);
-  --white: #fffdf8;
-  --shadow: 0 18px 50px rgba(44, 36, 28, 0.08);
+  --paper: #f7f1f2;
+  --paper-deep: #efe6e8;
+  --ink: #2a1a1e;
+  --ink-soft: #5c454c;
+  --moss: #6b1e2a;
+  --moss-deep: #4a1520;
+  --clay: #8b2e3c;
+  --clay-soft: #b85a6a;
+  --line: rgba(42, 26, 30, 0.12);
+  --white: #fffafb;
+  --shadow: 0 18px 50px rgba(42, 26, 30, 0.08);
   --serif: "Fraunces", "Iowan Old Style", Georgia, serif;
   --sans: "Source Sans 3", "Helvetica Neue", sans-serif;
 }
@@ -38,7 +38,7 @@ a:hover { color: var(--clay); }
   justify-content: space-between;
   gap: 1rem;
   padding: 0.85rem 6vw;
-  background: rgba(246, 239, 228, 0.92);
+  background: rgba(247, 241, 242, 0.92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
