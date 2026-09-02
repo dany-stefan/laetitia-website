@@ -7,11 +7,12 @@
       <nav class="nav-links">
         <a href="index.html" data-i18n="nav_home" ${page === "home" ? 'aria-current="page"' : ""}></a>
         <a href="about.html" data-i18n="nav_about" ${page === "about" ? 'aria-current="page"' : ""}></a>
-        <a href="subjects.html" data-i18n="nav_subjects" ${page === "subjects" ? 'aria-current="page"' : ""}></a>
+        <a href="thematiques.html" data-i18n="nav_subjects" ${page === "thematiques" ? 'aria-current="page"' : ""}></a>
         <a href="reviews.html" data-i18n="nav_reviews" ${page === "reviews" ? 'aria-current="page"' : ""}></a>
         <a href="book.html" data-i18n="nav_book" ${page === "book" ? 'aria-current="page"' : ""}></a>
       </nav>
       <div class="header-tools">
+        <a class="btn header-cta" href="book.html" data-i18n="cta"></a>
         <div class="lang-toggle" role="group">
           <button type="button" data-lang="fr">FR</button>
           <button type="button" data-lang="en">EN</button>

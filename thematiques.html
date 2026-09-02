@@ -3,33 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sujets — Laetitia Legrand</title>
+  <title>Thématiques — Laetitia Legrand</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta http-equiv="Cache-Control" content="no-store">
-  <link rel="stylesheet" href="css/styles.css?v=14">
+  <link rel="stylesheet" href="css/styles.css?v=39">
 </head>
-<body data-page="subjects">
+<body data-page="thematiques">
   <header class="site-header" data-header></header>
   <section class="section">
     <div class="wrap">
       <h1 data-i18n="subjects_h"></h1>
-      <p class="lede" data-i18n="subjects_intro"></p>
-      <p class="quiet">120 $ taxes incluses · 90 min</p>
-      <div class="subject-grid" style="margin-top:2rem">
-        <article class="card"><h3 data-i18n="s1_t"></h3><p data-i18n="s1"></p></article>
-        <article class="card"><h3 data-i18n="s2_t"></h3><p data-i18n="s2"></p></article>
-        <article class="card"><h3 data-i18n="s3_t"></h3><p data-i18n="s3"></p></article>
-        <article class="card"><h3 data-i18n="s4_t"></h3><p data-i18n="s4"></p></article>
-        <article class="card"><h3 data-i18n="s5_t"></h3><p data-i18n="s5"></p></article>
-        <article class="card"><h3 data-i18n="s6_t"></h3><p data-i18n="s6"></p></article>
-        <article class="card"><h3 data-i18n="s7_t"></h3><p data-i18n="s7"></p></article>
-        <article class="card"><h3 data-i18n="s8_t"></h3><p data-i18n="s8"></p></article>
-        <article class="card"><h3 data-i18n="s9_t"></h3><p data-i18n="s9"></p></article>
-        <article class="card"><h3 data-i18n="s10_t"></h3><p data-i18n="s10"></p></article>
-        <article class="card"><h3 data-i18n="s11_t"></h3><p data-i18n="s11"></p></article>
+      <p class="quiet wheel-hint" data-i18n="wheel_hint"></p>
+      <div class="wheel-stage" id="theme-wheel-stage"></div>
+      <div class="theme-below" id="theme-below">
+        <a class="theme-offer" href="book.html?request=special">
+          <span class="theme-offer-tag" data-i18n="theme_offer_tag"></span>
+          <span class="theme-offer-text" data-i18n="theme_offer"></span>
+        </a>
+        <article class="theme-detail card" id="theme-detail" hidden>
+          <h2 id="theme-detail-title"></h2>
+          <p id="theme-detail-body"></p>
+          <p><a class="btn" id="theme-detail-book" href="book.html" data-i18n="theme_book"></a></p>
+          <p><button type="button" class="theme-resume" id="theme-detail-resume" data-i18n="theme_resume"></button></p>
+        </article>
       </div>
     </div>
   </section>
@@ -53,10 +52,11 @@
     </div>
   </section>
   <footer class="site-footer">
-    <p data-i18n="disclaimer"></p>
+    <p class="quiet" data-i18n="visit_note"></p>
     <p data-i18n="footer"></p>
   </footer>
-  <script src="js/i18n.js?v=14"></script>
-  <script src="js/app.js?v=14"></script>
+  <script src="js/i18n.js?v=40"></script>
+  <script src="js/app.js?v=29"></script>
+  <script src="js/theme-wheel.js?v=39"></script>
 </body>
 </html>

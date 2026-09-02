@@ -60,6 +60,20 @@
     });
   }
 
+  const params = new URLSearchParams(location.search);
+  const topicFromUrl = params.get("topic");
+  const topicSel = document.getElementById("topic");
+  if (topicFromUrl && topicSel && [...topicSel.options].some((o) => o.value === topicFromUrl)) {
+    topicSel.value = topicFromUrl;
+  }
+
+  const notesEl = document.getElementById("notes");
+  if (params.get("request") === "special" && notesEl && !notesEl.value) {
+    const lang = localStorage.getItem("ll-lang") || "fr";
+    const dict = (window.I18N && window.I18N[lang]) || {};
+    if (dict.theme_notes_special) notesEl.value = dict.theme_notes_special;
+  }
+
   dateInput.addEventListener("change", renderSlots);
   [...form.querySelectorAll("[name=duration]")].forEach((el) => el.addEventListener("change", renderSlots));
   renderSlots();
@@ -98,22 +112,7 @@
       body: data,
     })
       .then((r) => r.json().then((j) => ({ ok: r.ok, j })))
-      .then((res) => {
-        // #region agent log
-        fetch("http://127.0.0.1:7606/ingest/a44ee5c7-1506-4d73-9cde-d540258920e9", {
-          method: "POST",
-          headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "9bd690" },
-          body: JSON.stringify({
-            sessionId: "9bd690",
-            runId: "client-mail",
-            hypothesisId: "G",
-            location: "book.js:submit",
-            message: "formsubmit_ajax",
-            data: { ok: res.ok, hasClient: Boolean(clientEmail), success: Boolean(res.j && res.j.success) },
-            timestamp: Date.now(),
-          }),
-        }).catch(() => {});
-        // #endregion
+      .then(() => {
         window.location.href = mailto;
       })
       .catch(() => {
